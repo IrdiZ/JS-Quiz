@@ -48,10 +48,12 @@ const d_text = document.getElementById('d_text');
 const submitBtn = document.getElementById('submit');
 
 let currentQuiz = 0;
+let answer = undefined;
 
 loadQuiz();
 
 function loadQuiz(){
+    deselectAnsw();
     const currentQuizData = quizData
     [currentQuiz];
     questionEl.innerHTML = currentQuizData.question;
@@ -62,12 +64,39 @@ function loadQuiz(){
 
 }
 
-submitBtn.addEventListener("click", () => {
-    currentQuiz++;
-    if(currentQuiz< quizData.length){
-        loadQuiz();
-    } else {
-        //results
-    }
+function getSelected(){
+    const answersEls = document.querySelectorAll('.answer');
     
+    let answer = undefined;
+
+    answersEls.forEach((answerEl)=> {
+        if(answerEl.checked){
+            answer = answerEl.id;
+        }
+    });
+return answer;
+}
+
+function deselectAnsw(){
+    const answersEls = document.querySelectorAll('.answer');
+    answersEls.forEach((answerEl) => {
+        answerEl.checked = false;
+    });
+}
+
+submitBtn.addEventListener("click", () => {
+
+    const answer = getSelected();
+
+    if(answer){
+        if (answer === quizData[currentQuiz].correct){
+            score++;
+        }
+        currentQuiz++;
+        if(currentQuiz< quizData.length){
+            loadQuiz();
+        } else {
+            //results
+        }
+    }
 });
