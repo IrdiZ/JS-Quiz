@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@300;400;600&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+    margin: 0;
+    font-family: 'Gantari', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.quiz-container{
+    background-color: aliceblue;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
