@@ -17,7 +17,17 @@ body {
 
 .quiz-container{
     background-color: aliceblue;
-    width: 400px;
+    width: 600px;
+    max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header{
+    padding:2rem;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
 }
