@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('/pattern.jpg');
+    background-image: url('images/pattern.jpg');
     background-size: cover;
     background-position: center center;
     margin: 0;
