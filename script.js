@@ -101,10 +101,6 @@ let answer = undefined;
 let score = 0;
 let indexTemp = 0;
 
-for (i = 0; i < quizData.length; i++) {
-    lolData[i] = quizData[i];
-}
-
 function changeQuiz(category){
 
     indexTemp = parseInt(category.innerHTML);
@@ -123,9 +119,14 @@ function changeQuiz(category){
     } 
 }
 
-loadQuiz();
+quiz.style.display = "none";
+
+while(loadQuiz === !undefined){
+    loadQuiz();
+}
 
 function loadQuiz(){
+    quiz.style.display = "block";
     deselectAnsw();
     const currentQuizData = lolData
     [currentQuiz];

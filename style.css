@@ -77,7 +77,6 @@ button:active{
     flex-direction: column;
     padding: 1rem;
     border: 5px solid black;
-
 }
 .message{
     font-size: 80px;
@@ -93,7 +92,7 @@ button:active{
     grid-template-columns: auto auto auto;
     background-color: #2196F3;
     margin-left: 105px;
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 5px;
   }
 
@@ -103,4 +102,12 @@ button:active{
     font-size: 30px;
     text-align: center;
     border: 5px solid #2196F3;
+  }
+  .categ{
+    width: 760px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
   }
