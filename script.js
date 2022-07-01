@@ -8,11 +8,11 @@ const quizData = [
         correct: 'b' 
     }, 
     {
-        question: 'Who is the current US President? (2022)',
-        a: 'George Bush',
-        b: 'Barack Obama',
-        c: 'Donald Trump',
-        d: 'Joe Biden',
+        question: 'Who is the current Kyrgyzstan President? (2022)',
+        a: 'Genghis Khan',
+        b: 'Henry VIII of England',
+        c: 'Yaropolk I',
+        d: 'Sadyr Japarov',
         correct: 'd'
     },
     {
@@ -99,7 +99,8 @@ submitBtn.addEventListener("click", () => {
             loadQuiz();
         } else {
             quiz.innerHTML = `<h2>You answered ${score} /
-            ${quizData.length} questions.</h2>`;
+            ${quizData.length} questions.</h2> <button onClick=
+            "location.reload()">Start Again</button>`;
         }
     }
 });
