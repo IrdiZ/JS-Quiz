@@ -61,7 +61,9 @@ button{
 button:hover{
     background-color: rgb(74, 233, 180);
 }
-
+button:focus{
+    background-color: aquamarine;
+}
 .container{
     background-color: burlywood;
     display: flex;
