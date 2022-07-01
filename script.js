@@ -158,6 +158,12 @@ function changeQuiz(category){
             lolData[i] = quizData2[i];
         }
         loadQuiz();
+    }
+    if (indexTemp === 3){
+        for (i = 0; i < quizData3.length; i++) {
+            lolData[i] = quizData3[i];
+        }
+        loadQuiz();
     } 
 }
 
@@ -207,6 +213,10 @@ category1.addEventListener("click", () => {
 category2.addEventListener("click", () => {
 
     changeQuiz(category2);
+});
+category3.addEventListener("click", () => {
+
+    changeQuiz(category3);
 });
 
 submitBtn.addEventListener("click", () => {
