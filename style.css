@@ -6,7 +6,9 @@
 }
 
 body {
-    background-color: beige;
+    background-image: url('/pattern.jpg');
+    background-size: cover;
+    background-position: center center;
     margin: 0;
     font-family: 'Gantari', sans-serif;
     display: flex;
@@ -77,6 +79,8 @@ button:active{
     flex-direction: column;
     padding: 1rem;
     border: 5px solid black;
+    color:darkblue;
+    border-radius: 1rem;
 }
 .message{
     font-size: 80px;
@@ -94,14 +98,16 @@ button:active{
     margin-left: 105px;
     margin-top: 5px;
     padding: 5px;
+    border-radius: 3rem;
   }
 
   .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 228, 228, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     font-size: 30px;
     text-align: center;
     border: 5px solid #2196F3;
+    border-radius: 3rem;
   }
   .categ{
     width: 760px;
