@@ -1,22 +1,22 @@
 const quizData = [
     {
-        question: 'Which is a programming lang?',
-        a: 'Assembly',
-        b: 'lot',
-        c: 'tol',
-        d: 'rofl',
-        correct: 'a' 
+        question: 'Which of these is a programming language?',
+        a: 'HTML',
+        b: 'Malbolge',
+        c: 'MOVA',
+        d: 'FTP',
+        correct: 'b' 
     }, 
     {
-        question: 'US President',
-        a: 'Bush',
-        b: 'Obama',
-        c: 'Trump',
-        d: 'Biden',
+        question: 'Who is the current US President? (2022)',
+        a: 'George Bush',
+        b: 'Barack Obama',
+        c: 'Donald Trump',
+        d: 'Joe Biden',
         correct: 'd'
     },
     {
-        question: 'Most popular prog lang',
+        question: 'Which is the most popular programming language? (2022)',
         a: 'Javascript',
         b: 'Python',
         c: 'Java',
@@ -25,14 +25,14 @@ const quizData = [
     },
     {
         question: 'What does HTML stand for?',
-        a: 'Hypertext Markup Language',
-        b: 'Hyperturn MoonLanding',
-        c: 'High Turing Machine Localisation',
-        d: 'HElicopters Terminals Motorboats LAmborginis',
-        correct: 'a'
+        a: 'Hyper Turbo Moon Landing',
+        b: 'High Turing Machine Localisation',
+        c: 'Holy Technical Machine Level',
+        d: 'Hypertext Markup Language',
+        correct: 'd'
     },
     {
-        question: 'What year was JS launched?',
+        question: 'What year was JavaScript launched?',
         a: '2020',
         b: '1995',
         c: '1996',
@@ -40,6 +40,7 @@ const quizData = [
         correct: 'b'
     }
 ];
+const quiz = document.getElementById("quiz");
 const questionEl = document.getElementById('question');
 const a_text = document.getElementById('a_text');
 const b_text = document.getElementById('b_text');
@@ -49,6 +50,7 @@ const submitBtn = document.getElementById('submit');
 
 let currentQuiz = 0;
 let answer = undefined;
+let score = 0;
 
 loadQuiz();
 
@@ -96,7 +98,8 @@ submitBtn.addEventListener("click", () => {
         if(currentQuiz< quizData.length){
             loadQuiz();
         } else {
-            //results
+            quiz.innerHTML = `<h2>You answered ${score} /
+            ${quizData.length} questions.</h2>`;
         }
     }
 });
