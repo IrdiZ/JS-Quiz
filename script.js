@@ -91,33 +91,43 @@ const b_text = document.getElementById('b_text');
 const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
 const submitBtn = document.getElementById('submit');
-const category1 = document.getElementsByName('button1');
+const category1 = document.getElementById('1');
+const category2 = document.getElementById('2');
+const category3 = document.getElementById('3');
 
 
 let currentQuiz = 0;
 let answer = undefined;
 let score = 0;
-let index = 1;
+let indexTemp = 0;
 
-function changeQuiz(){
-    if (index === 1){
+for (i = 0; i < quizData.length; i++) {
+    lolData[i] = quizData[i];
+}
+
+function changeQuiz(category){
+
+    indexTemp = parseInt(category.innerHTML);
+
+    if (indexTemp === 1){
         for (i = 0; i < quizData.length; i++) {
             lolData[i] = quizData[i];
         }
+        loadQuiz();
     }
-    if (index === 2){
+    if (indexTemp === 2){
         for (i = 0; i < quizData2.length; i++) {
             lolData[i] = quizData2[i];
         }
+        loadQuiz();
     } 
 }
-
 
 loadQuiz();
 
 function loadQuiz(){
     deselectAnsw();
-    const currentQuizData = quizData
+    const currentQuizData = lolData
     [currentQuiz];
     questionEl.innerHTML = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
@@ -147,20 +157,29 @@ function deselectAnsw(){
     });
 }
 
+category1.addEventListener("click", () => {
+
+    changeQuiz(category1);
+});
+category2.addEventListener("click", () => {
+
+    changeQuiz(category2);
+});
+
 submitBtn.addEventListener("click", () => {
 
     const answer = getSelected();
 
     if(answer){
-        if (answer === quizData[currentQuiz].correct){
+        if (answer === lolData[currentQuiz].correct){
             score++;
         }
         currentQuiz++;
-        if(currentQuiz < quizData.length){
+        if(currentQuiz < lolData.length){
             loadQuiz();
         } else {
             quiz.innerHTML = `<h2>You answered ${score} /
-            ${quizData.length} questions.</h2>
+            ${lolData.length} questions.</h2>
             <button onClick="location.reload()">
             Start Again</button>`;
         }
