@@ -11,7 +11,7 @@ body {
     font-family: 'Gantari', sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     min-height: 100vh;
 }
 
@@ -60,4 +60,15 @@ button{
 }
 button:hover{
     background-color: rgb(74, 233, 180);
+}
+
+.container{
+    background-color: burlywood;
+    display: flex;
+    height: 700px;
+    width: 800px;
+    max-height: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem;
 }
