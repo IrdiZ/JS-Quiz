@@ -97,7 +97,7 @@ button:active{
     grid-template-columns: auto auto auto;
     background-color: #2196F3;
     margin-left: 105px;
-    margin-top: 5px;
+    margin-top: 25px;
     padding: 5px;
     border-radius: 3rem;
   }
