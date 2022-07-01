@@ -40,6 +40,50 @@ const quizData = [
         correct: 'b'
     }
 ];
+const quizData2 = [
+    {
+        question: 'Which of these?',
+        a: 'HTML',
+        b: 'Malbolge',
+        c: 'MOVA',
+        d: 'loti',
+        correct: 'b' 
+    }, 
+    {
+        question: 'Who is the current Kyrgyzstan President? (2022)',
+        a: 'Genghis Khan',
+        b: 'Henry VIII of England',
+        c: 'Yaropolk I',
+        d: 'Sadyr Japarov',
+        correct: 'd'
+    },
+    {
+        question: 'Which is the most popular programming language? (2022)',
+        a: 'Javascript',
+        b: 'Python',
+        c: 'Java',
+        d: 'c++',
+        correct: 'a'
+    },
+    {
+        question: 'What does HTML stand for?',
+        a: 'Hyper Turbo Moon Landing',
+        b: 'High Turing Machine Localisation',
+        c: 'Holy Technical Machine Level',
+        d: 'Hypertext Markup Language',
+        correct: 'd'
+    },
+    {
+        question: 'What year was JavaScript launched?',
+        a: '2020',
+        b: '1995',
+        c: '1996',
+        d: '1991',
+        correct: 'b'
+    }
+];
+lolData = [];
+
 const quiz = document.getElementById("quiz");
 const questionEl = document.getElementById('question');
 const a_text = document.getElementById('a_text');
@@ -51,6 +95,21 @@ const submitBtn = document.getElementById('submit');
 let currentQuiz = 0;
 let answer = undefined;
 let score = 0;
+let index = 1;
+
+function changeQuiz(){
+    if (index === 1){
+        for (i = 0; i < quizData.length; i++) {
+            lolData[i] = quizData[i];
+        }
+    }
+    if (index === 2){
+        for (i = 0; i < quizData2.length; i++) {
+            lolData[i] = quizData2[i];
+        }
+    } 
+}
+
 
 loadQuiz();
 
@@ -95,7 +154,7 @@ submitBtn.addEventListener("click", () => {
             score++;
         }
         currentQuiz++;
-        if(currentQuiz< quizData.length){
+        if(currentQuiz < quizData.length){
             loadQuiz();
         } else {
             quiz.innerHTML = `<h2>You answered ${score} /
