@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('images/pattern.jpg');
+    background-image: url('images/dark.jpg');
     background-size: cover;
     background-position: center center;
     margin: 0;
@@ -51,7 +51,7 @@ ul{
 }
 
 button{
-    background-color: aquamarine;
+    background-color: rgb(167,172,176);
     display: block;
     width: 100%;
     padding: 2rem;
@@ -59,62 +59,65 @@ button{
     font-family: inherit;
     border:none;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 button:hover{
-    background-color: rgb(74, 233, 180);
+    background-color: rgb(64,67,60);
 }
 button:focus{
-    background-color: aquamarine;
+    background-color: rgb(64,67,60);
 }
 button:active{
-    background-color: rgb(29, 237, 168);
+    background-color: rgb(64,67,60);
 }
 .container{
-    background-color: burlywood;
+    background-color: rgb(64,67,60);
     display: flex;
     height: 700px;
     width: 800px;
     max-height: 100%;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     padding: 1rem;
     border: 5px solid black;
-    color:darkblue;
-    border-radius: 1rem;
+    color:rgb(167,172,176);
+    border-radius: 1rem;  
 }
 .message{
     font-size: 80px;
-    text-shadow: 2px 2px 3px aqua;
+    text-shadow: 2px 2px 3px black;
 }
 .p_message{
     font-size: 30px;
     font-weight: 600;
 }
 .grid-container {
-    width: 550px;
+    width: 750px;
     height: 250px;
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: #2196F3;
-    margin-left: 105px;
+    background-color:rgb(167,172,176);
+    margin-left: auto;
     margin-top: 25px;
     padding: 5px;
     border-radius: 3rem;
   }
 
   .grid-item {
-    background-color: rgba(255, 228, 228, 0.8);
+    background-color: rgb(221,227,229);
     border: 1px solid rgba(0, 0, 0, 0.8);
     font-size: 30px;
     text-align: center;
-    border: 5px solid #2196F3;
+    border: 5px solid rgb(167,172,176);
     border-radius: 3rem;
+    padding: 10px;
+    min-width: 200px;
   }
   .categ{
     width: 760px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 30px;
   }
